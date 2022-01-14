@@ -9,14 +9,19 @@
 <style>
 
 #img-rotate {
-    -ms-transform: rotate(345deg); /* Microsoft Edge */
-    -webkit-transform: rotate(345deg); /* Chrome and Safari */
-    transform: rotate(345deg);
+    -ms-transform: rotate(172.5deg); /* Microsoft Edge */
+    -webkit-transform: rotate(172.5deg); /* Chrome and Safari */
+    transform: rotate(172.5deg);
 }
 #video-rotate {
-    -ms-transform: rotate(15deg); /* Microsoft Edge */
-    -webkit-transform: rotate(15deg); /* Chrome and Safari */
-    transform: rotate(15deg);
+    -ms-transform: rotate(-15deg); /* Microsoft Edge */
+    -webkit-transform: rotate(-15deg); /* Chrome and Safari */
+    transform: rotate(-15deg);
+}
+
+#logo-rotate {
+    -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+    transform: rotateY(180deg);
 }
 
 </style>
@@ -28,9 +33,8 @@
 
 
 <header>
-<img src="media/uCorp-logo-3.png" alt="uCorp logo" />
+    <img id="logo-rotate" src="media/uCorp-logo-3.png" alt="uCorp logo" />
 </header>
-
 
 <nav>
 <p><a class="navlinks" href="http://www.ucorp.biz/course_about.php">About Course</a></p>
