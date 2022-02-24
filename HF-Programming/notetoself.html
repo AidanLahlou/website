@@ -5,12 +5,12 @@
 <head>
 <title>Note to Self</title>
 
-<meta charset=”utf-8”>
-<link rel="stylesheet" href="notetoself.css">
+<meta charset=utf-8>
 <script>
 window.onload = init;
+function init(var button = document.getElementById("add_button"); button.onclick = createSticky;)  
 
-function init() {
+ {
 
 for (var i = 0; i < localStorage.length; i++) {
 
@@ -26,13 +26,26 @@ addStickyToDOM(value); }
 
 function addStickyToDOM(value) {
 
-var stickies = document.getElementById("stickies"); var sticky = document.createElement("li");
+var stickies = document.getElementById("stickies");
 
-var span = document.createElement("span"); span.setattribute("class", "sticky"); span.innerHTML = value;
+ var sticky = document.createElement("li");
+
+var span = document.createElement("span");
+
+span.setattribute("class", "sticky");
+
+span.innerHTML = value;
 
 sticky.appendChild(span); stickies.appendChild(sticky);
 
 }
+
+function createSticky() {
+
+var value = document.getElementById("note_text").value; var key = "sticky_" + localStorage.length; localStorage.setItem(key, value);
+
+addStickyToDOM(value);
+
 </script>
 
 </head>
@@ -40,16 +53,13 @@ sticky.appendChild(span); stickies.appendChild(sticky);
 
       <form>
 <input type="text" id="note_text">
-<input type="button" id=add_button" value="add sticky sote to self">
+<input type="button" "id=add_button" value="add sticky sote to self">
 
 </form>
 
 <ul id="stickies">
 
       </ul>
-
-  </body>
-</html>
 
 <footer>
   <a href="http://validator.w3.org/check?uri=https://AidanLahlou.github.io/website/HF-Programming/notetoself.html"> <strong> HTML </strong> Valid! </a>  
