@@ -1,33 +1,55 @@
 <!doctype html> 
 <html lang="en"> 
 
+
 <head>
-<title>Note To Self</title>
-<style>
+<title>Note to Self</title>
 
-
+<meta charset=”utf-8”>
+<link rel="stylesheet" href="notetoself.css">
 <script>
-localStorage.setItem("sticky_1", "Cancel cable tv, who needs it now?");
+window.onload = init;
 
-localStorage.setItem("sticky_0", "Pick up dry cleaning");
+function init() {
 
-localStorage.setItem("sticky_0", "Pick up dry cleaning");
+for (var i = 0; i < localStorage.length; i++) {
 
-localStorage.setItem("sticky_1", "Cancel cable tv, who needs it now?");
+var key = localStorage.key(i);
 
-var sticky = localStorage.getItem("sticky_0");
+if (key.substring(0, 6) == "sticky") {
 
-alert(sticky);
+var value = localStorage.getItem(key);
 
+addStickyToDOM(value); }
+
+} }
+
+function addStickyToDOM(value) {
+
+var stickies = document.getElementById("stickies"); var sticky = document.createElement("li");
+
+var span = document.createElement("span"); span.setattribute("class", "sticky"); span.innerHTML = value;
+
+sticky.appendChild(span); stickies.appendChild(sticky);
+
+}
 </script>
 
-   </head>
-   <body>
+</head>
+  <body>
 
-<form>
+      <form>
+<input type="text" id="note_text">
+<input type="button" id=add_button" value="add sticky sote to self">
 
 </form>
 
+<ul id="stickies">
+
+      </ul>
+
+  </body>
+</html>
 
 <footer>
   <a href="http://validator.w3.org/check?uri=https://AidanLahlou.github.io/website/HF-Programming/notetoself.html"> <strong> HTML </strong> Valid! </a>  
