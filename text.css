@@ -1,0 +1,28 @@
+
+body{
+  background-color: #b57edc; 
+  }
+
+h1, footer {
+    text-align: center;
+
+}
+footer a, footer a:visited {
+    color: black; 
+  background: 2px solid white; 
+
+}
+
+body{
+  color: black;
+}
+
+a {
+color: black;
+padding: 5px;
+}
+
+a, a:visited{
+border: 2px solid white;
+
+}
