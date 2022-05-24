@@ -19,4 +19,69 @@ body{
 a {
 color: white;
 }
+#menu-bar {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menu-bar__button {
+  float: left;
+}
+
+.menu-bar__button a, .menu-bar__dropdown__heading {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 18px 16px;
+  text-decoration: none;
+}
+
+.menu-bar__button a:hover, .menu-bar__dropdown:hover .menu-bar__dropdown__heading {
+  background-color: #5b5bff;
+}
+
+li.menu-bar__dropdown, li.menu-bar__button{
+  display: inline-block;
+}
+
+.menu-bar__dropdown__content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.menu-bar__dropdown__content--link {
+  color: #333333;
+  padding: 12px 18px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.menu-bar__dropdown__content--subheading {
+  color: #ffffff;
+  background-color: #808080;
+  padding: 8px;
+  margin: 0px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+a.menu-bar__dropdown__content--subheading:hover {
+  background-color: #6666e0
+}
+
+.menu-bar__dropdown__content .menu-bar__dropdown__content--link:hover {
+  background-color: #a9a9ff
+}
+
+.menu-bar__dropdown:hover .menu-bar__dropdown__content {
+  display: block;
+}
 
